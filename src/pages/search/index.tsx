@@ -1,9 +1,18 @@
-import React from "react"
+import React, { Component } from "react"
+import GenericLayout from "../../layouts/generic"
+import Filters from "./components/filters"
+import List from "./components/list"
+import "./style.less"
 
-const Search: React.FC = () => (
-    <div>
-        search
-    </div>
-)
-
-export default Search;
+export default class Search extends Component {
+    render(){
+        return (
+            <div className="container-search-page">
+                <GenericLayout >
+                    <Filters />
+                    <List />
+                </GenericLayout>
+            </div>
+        )
+    }
+};
